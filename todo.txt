@@ -1,0 +1,6 @@
+1. Create a script with beautiful soup to get data from 
+https://www.the-numbers.com/movie/budgets/all
+    - Try to bypass Status code error 401
+        - Add status code etc
+    OR
+    - Just download the data from the html file
