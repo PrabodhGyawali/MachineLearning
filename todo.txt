@@ -1,11 +1,8 @@
 1. Create a script with beautiful soup to get data from 
-https://www.the-numbers.com/movie/budgets/all
-    - Try to bypass Status code error 401
-        - Add status code etc:
-            - https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses
-        - Postman user agent
-        - Create a script to run multiple requests to get the data
-    
-    OR
+2. Thread through each html document and add to a global class variable
+3. Think about storage: DB, csv or json
 
-    - Just download like 100 html files manually
+Things to look into:
+- Postman user agent
+    - Create a script to run multiple requests to get the data
+- https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/403-and-401-bypasses

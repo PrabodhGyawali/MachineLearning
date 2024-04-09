@@ -21,7 +21,7 @@ response = requests.get(url=URL, headers=header)
 # store response.text into a file
 write_raw_data(response.text, "Raw-Data-0.html")
 
-# Thread this task to make it really fast as we have to scrape 100+ pages
+# Thread this task to make it really fast as we have to scrape 60+ webpages
 def scraper(i):
     URL_MORE = URL + f"/{i}01"
     response = requests.get(url=URL_MORE, headers=header)
