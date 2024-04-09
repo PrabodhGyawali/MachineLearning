@@ -13,7 +13,7 @@ header = json.loads(header_string)
 # Write file contents into a document
 def write_raw_data(http_response_text, file_name):
     root_path = "raw_data/"
-    with open(root_path + file_name, "w") as file:
+    with open(root_path + file_name, "w", encoding="utf-8") as file:
         file.write(http_response_text)
 
 response = requests.get(url=URL, headers=header)
