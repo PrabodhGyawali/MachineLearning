@@ -39,3 +39,4 @@ for movie in movies:
     movie.to_csv("cleaned_data.csv")
             
 print("Data cleaned and saved to 'cleaned_data.csv'")
+print(len(movies))

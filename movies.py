@@ -8,7 +8,7 @@ class Movie:
     DomesticGross: int
     WorldWideGross: int
     def __init__(self, id, releaseDate, name, budget, domesticGross, worldWideGross):
-        self.Id = int(id)
+        self.Id = int(self.clean_name(id))
         self.ReleaseDate = self.clean_date(releaseDate)
         self.Name = self.clean_name(name)
         self.Budget = self.clean_revenue(budget)
