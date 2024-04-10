@@ -1,6 +1,7 @@
-1. Create a script with beautiful soup to get data from 
-2. Thread through each html document and add to a global class variable
-3. Think about storage: DB, csv or json
+1. Thread and store data as a tsv file and append to 6492 rows
+
+Storage in tsv file format.
+    - convert to zip and push to github
 
 Things to look into:
 - Postman user agent
