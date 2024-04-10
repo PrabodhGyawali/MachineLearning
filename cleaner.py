@@ -14,8 +14,7 @@ table_rows = soup.select("tr")
 movies = []
 def cleaner(table_rows: ResultSet[Tag]):
     movies_chunk = []
-    for i in range(1, 101):
-        row = table_rows[i]
+    for row in table_rows[1:]:
         fields = row.select("td") 
         # Create a movie object
         movie = Movie(fields[1].text, fields[2].text, fields[3].text, fields[4].text, fields[5].text)
@@ -24,4 +23,5 @@ def cleaner(table_rows: ResultSet[Tag]):
 
 cleaner(table_rows)
 
-print(movies)
+for movie in movies:
+    print(movie.Name, movie.ReleaseDate, movie.Budget, movie.DomesticGross, movie.WorldWideGross)
