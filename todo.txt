@@ -1,7 +1,4 @@
-1. Thread and store data as a tsv file and append to 6492 rows
-
-Storage in tsv file format.
-    - convert to zip and push to github
+1. Add headers to the csv file and export it to google colab
 
 Things to look into:
 - Postman user agent
