@@ -40,4 +40,4 @@ class Movie:
         with open(file_path, "a", encoding="utf-8") as file:
             file.write(
                 f"{self.Id},{self.Name},{self.ReleaseDate.isoformat()},{self.Budget},{self.DomesticGross},{self.WorldWideGross}\n"
-                )
+            )
