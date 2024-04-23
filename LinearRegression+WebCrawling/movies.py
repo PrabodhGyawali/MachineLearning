@@ -35,7 +35,8 @@ class Movie:
         revenue = int(revenue)
         return revenue
     
-    def to_csv(self, file_path): # May be needed in the future
+    # Don't forget to add header to the csv path once you're done using this method with all movies
+    def to_csv(self, file_path):
         with open(file_path, "a", encoding="utf-8") as file:
             file.write(
                 f"{self.Id},{self.Name},{self.ReleaseDate.isoformat()},{self.Budget},{self.DomesticGross},{self.WorldWideGross}\n"
