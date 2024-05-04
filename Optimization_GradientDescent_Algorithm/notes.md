@@ -1,6 +1,6 @@
 ## Understand what is a Cost Function/Loss Function/Error Function (maybe) Objective Function 
 1. From Google [Colab](https://colab.research.google.com/drive/1yVl3doA694Grmn5fWZ63vA72ETmGvs47#scrollTo=1TjiUQtp2kst)
-- $J(\theta_0, \theta_1) = \sum_{i=1}^n (h\theta(x)^i-y^i)^2$
+- $J(\theta_0, \theta_1) = \sum_{i=1}^n (h\theta(x)_i-y_i)^2$
 
 Also can be called the residual sum of squares.
 
