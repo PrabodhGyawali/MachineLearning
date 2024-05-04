@@ -3,7 +3,7 @@
 import numpy as np
 import sympy as sp
 
-# 2 variables function
+# Classical partial derivative definitions within functions
 class f_eg4:
     @staticmethod
     def f(x, y) -> float:

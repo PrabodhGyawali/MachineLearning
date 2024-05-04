@@ -1,6 +1,6 @@
 ## Understand what is a Cost Function/Loss Function/Error Function (maybe) Objective Function 
 1. From Google [Colab](https://colab.research.google.com/drive/1yVl3doA694Grmn5fWZ63vA72ETmGvs47#scrollTo=1TjiUQtp2kst)
-- $J(\theta_0, \theta_1) = \frac{1}{m} \sum_{i=1}^n (h\theta(x)^i-y^i)^2$
+- $J(\theta_0, \theta_1) = \sum_{i=1}^n (h\theta(x)^i-y^i)^2$
 
 Also can be called the residual sum of squares.
 
@@ -14,4 +14,7 @@ Notes in my public [Colab](https://colab.research.google.com/drive/1eTJ7r5bTgJXF
         - $ f2(x) = x^4 - 4x^2 + 5$
         - $ h(x) = x^5 -2x^4 + 2 $
     - Batch gradient descent vs stocastic gradient descent
-    - Gradient descent algorithm for a 
+    - Gradient descent algorithm for two-variable function with partial derivative
+        - Sympy module -> `diff()`, `.evalf()`
+        - Creating a 3D plot with mpl_toolkits
+        - Loops and performance considerations with gradient descent algorithm
