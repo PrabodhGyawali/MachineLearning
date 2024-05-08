@@ -18,3 +18,6 @@ Notes in my public [Colab](https://colab.research.google.com/drive/1eTJ7r5bTgJXF
         - Sympy module -> `diff()`, `.evalf()`
         - Creating a 3D plot with mpl_toolkits
         - Loops and performance considerations with gradient descent algorithm
+    - Using `.reshape()` and 2D arrays for calculating the MSE Cost function
+        - Plotting this 3D cost function 
+
