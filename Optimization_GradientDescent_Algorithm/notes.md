@@ -65,17 +65,28 @@ Applying regression to these variables (dependent and independent):
 `regr.fit(x_5, y_5)`
 
 The `def fit(X, y, sample_weight=None)` takes an `X` and a `y` parameter which can both be matrices.
-- In single variable Linear Regression -> `X` and `y` both have size `(n,)`
+- In single variable Linear Regression -> `X` and `y` both have size `(n,)` 
 - However, multi-variable linear Regression allows for `(n_samples, n_features)` in `X` and `(n_samples, n_targets)` in `y`
 - `sample_weights` is simply a 1D array -> `(n_samples,)`
 
+Observation: sample of data
+- Student
+Features: characteristic/attribute of the observation
+- age, sex, grade
+
+Literally like a database table.
+
 # Advanced Mathematics with Linear Algebra in Linear Regression
+## Bivariate Model
+Two Independent variables and one dependent variables.
 ## Multiple Linear Regression:
 Independent variables are $(\vec{X_1}, \vec{X_2}, ..., \vec{X_n})$ and one dependent variable $({Y})$
 - Goal is to find a hyperplane that minimizes the squared differences between the actual and predicted values of Y
 $$y = w_0 + w_1X_1 + w_2X_2 + ... w_nX_n + e $$
 In Matrix form:
-$$\vec{Y} = X\dot \vec{w}$$
+$$\vec{Y} = X \vec{w} + \vec{e}$$
 where:
 - $\vec{Y}$ is a vector of size $n$
-- $X$ is a (n x p)
+- $X$ is a ($n$ x $p$) matrix, where $n$ is the observation and $p$ represents a variable
+- $\vec{w}$ is a vector of linear coefficients
+- $\vec{e}$ where each element is an error term
