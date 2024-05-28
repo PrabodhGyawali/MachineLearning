@@ -54,3 +54,28 @@ This formula makes it easier for us to calculate $\large{\frac{\partial MSE}{\pa
 $$\frac{\partial MSE}{\partial \theta_0} = -\frac{2}{n}\sum_{i=1}^n(y^(i) - \theta_0 - \theta_1x^(i))$$
 $$\frac{\partial MSE}{\partial \theta_1} = -\frac{2}{n}\sum_{i=1}^n(y^(i) - \theta_0x - \theta_1x^2)(x^(i))$$
 
+## Understanding Regression Analysis:
+In the google colab I have 2 variables:
+- `x_5` and `y_5` both are numpy arrays of size `(7,1)`
+
+Applying regression to these variables (dependent and independent):
+
+`regr = LinearRegression()`
+
+`regr.fit(x_5, y_5)`
+
+The `def fit(X, y, sample_weight=None)` takes an `X` and a `y` parameter which can both be matrices.
+- In single variable Linear Regression -> `X` and `y` both have size `(n,)`
+- However, multi-variable linear Regression allows for `(n_samples, n_features)` in `X` and `(n_samples, n_targets)` in `y`
+- `sample_weights` is simply a 1D array -> `(n_samples,)`
+
+# Advanced Mathematics with Linear Algebra in Linear Regression
+## Multiple Linear Regression:
+Independent variables are $(\vec{X_1}, \vec{X_2}, ..., \vec{X_n})$ and one dependent variable $({Y})$
+- Goal is to find a hyperplane that minimizes the squared differences between the actual and predicted values of Y
+$$y = w_0 + w_1X_1 + w_2X_2 + ... w_nX_n + e $$
+In Matrix form:
+$$\vec{Y} = X\dot \vec{w}$$
+where:
+- $\vec{Y}$ is a vector of size $n$
+- $X$ is a (n x p)
