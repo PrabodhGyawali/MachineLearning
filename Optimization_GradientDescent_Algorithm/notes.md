@@ -83,10 +83,10 @@ Two Independent variables and one dependent variables.
 Independent variables are $(\vec{X_1}, \vec{X_2}, ..., \vec{X_n})$ and one dependent variable $({Y})$
 - Goal is to find a hyperplane that minimizes the squared differences between the actual and predicted values of Y
 $$y = w_0 + w_1X_1 + w_2X_2 + ... w_nX_n + e $$
-In Matrix form:
-$$\vec{Y} = X \vec{w} + \vec{e}$$
-where:
-- $\vec{Y}$ is a vector of size $n$
-- $X$ is a ($n$ x $p$) matrix, where $n$ is the observation and $p$ represents a variable
-- $\vec{w}$ is a vector of linear coefficients
-- $\vec{e}$ where each element is an error term
+
+[In Matrix form and Vector Calculus](https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/regression-and-correlation/multiple-regression.html):
+- It reduces complexity and efficiency in calculating coefficients and intercepts of MultRegression Linear models
+- Link provides detailed mathematical definitions and explanations of applying Linear Algebra and Vector Calclus in multiregression models
+
+### Eg:
+Check `multiRegression.py` file which uses two Independent variables, Weight and Volume to predict CO2
