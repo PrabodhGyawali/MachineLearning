@@ -3,6 +3,17 @@
 - $J(\theta_0, \theta_1) = \sum_{i=1}^n (h\theta(x)_i-y_i)^2$
 
 Also can be called the residual sum of squares.
+The goal of gradient descent is to minimize the value of $J(\theta_0, \theta_1)$
+- It is easy to get confused with these new terms like $\theta_0$, $\theta_1$, $J$, $H$
+
+## Understanding recap:
+- $h_{\theta}(x) = \theta_0 + \theta_1x$, this is a new notation in machine learning rather than the mathematical notation $y = mx + c$
+- $J$ is a cost function that measures how well a model predicts the actual data by using $MSE$
+- Gradient Descent is an optimization algorithm where we try to minimize the value from $J(\theta_0, \theta_1)$
+- The gradient descent algorithm will require these parameters to get updated as we try to minimize the value of $J$ by descending down the gradient:
+$$\theta_1 := \theta_1 - \alpha \frac{1}{m} \frac{\partial J(\theta_0, \theta_1)}{\partial \theta_1} $$
+- Note that in Multi-variable cost functions requires understanding of vector calculus, as the parameters could be a vector (2D numpy.array())
+$$ \theta := \theta - \nabla_{\theta}J(\theta) $$ 
 
 Notes in my public [Colab](https://colab.research.google.com/drive/1eTJ7r5bTgJXFcnWR2gt-C0kwRaZhxj3W#scrollTo=0xL2nseyL6_B)
 - Summary of simple things and simple commands:
@@ -39,4 +50,7 @@ $$MSE = \frac{1}{n}\sum_{i=1}^n(y-\theta_0 - \theta_1x)(y-\theta_0 - \theta_1x)$
 $$MSE = \frac{1}{n}\sum_{i=1}^n(y^2-2\theta_0y-2\theta_1xy+\theta_0^2+2\theta_0\theta_1x+\theta_1^2x^2)$$
 
 This formula makes it easier for us to calculate $\large{\frac{\partial MSE}{\partial\theta_0}}$ and $\large{\frac{\partial MSE}{\partial\theta_1}}$
+
+$$\frac{\partial MSE}{\partial \theta_0} = -\frac{2}{n}\sum_{i=1}^n(y^(i) - \theta_0 - \theta_1x^(i))$$
+$$\frac{\partial MSE}{\partial \theta_1} = -\frac{2}{n}\sum_{i=1}^n(y^(i) - \theta_0x - \theta_1x^2)(x^(i))$$
 

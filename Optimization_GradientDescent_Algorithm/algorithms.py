@@ -42,4 +42,3 @@ def gradient_descent(function, gradients: np.array, initial_guess : np.array, mu
     print(f'Values in gradients array: {gradients}')
     print(f'The minimum cost is: {function(params[0], params[1])}') # Where f is the function to minimize
         
-    
