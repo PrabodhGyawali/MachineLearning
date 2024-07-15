@@ -25,8 +25,6 @@ def gradient_descent(derivative_func, initial_guess : float, multiplier : float,
 
     return values, slope_values
 
-# Gradient Descent Algorithm Two-variable functions
-
 # Gradient Descent Algorithm two-variable functions
 def gradient_descent(function, gradients: np.array, initial_guess : np.array, multiplier : float, precision : float, max_iter : int):
     # Initialize parameters of 2D numpy array

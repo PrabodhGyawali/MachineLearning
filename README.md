@@ -11,5 +11,14 @@ Repo with a bunch of ML projects that I am working with to get into the accelera
 
 # Repository 2:
 ## Optimization and Gradient Descent algorithms
-### Predicting House prices with multi-variable linear regression
 
+# Project 2:
+## Predicting House prices with multi-variable linear regression
+### Gather a bunch of features - using the three methods below
+>Method 1: [Rightmove](https://www.rightmove.co.uk/house-prices/oxford.html) ~ 38,086 properties 
+>Method 2: Explore open-source statistics like [ons.gov.uk]
+>Method 3: `sci-kit` learn free datasets
+
+### Learning Objectives:
+- Improve Web Scraping Skills
+- Improve Regressional analysis apply gradient-descent algorithms
