@@ -1,17 +1,57 @@
 import requests
-# from bs4 import BeautifulSoup
+import enum
+from bs4 import BeautifulSoup
+import threading
 
-base_url = 'https://www.rightmove.co.uk/property-for-sale/find.html?searchType=SALE&locationIdentifier=REGION%5E94136&insId=1&radius=10.0&minPrice=&maxPrice=&minBedrooms=&maxBedrooms=&displayPropertyType=&maxDaysSinceAdded=&_includeSSTC=on&sortByPriceDescending=&primaryDisplayPropertyType=&secondaryDisplayPropertyType=&oldDisplayPropertyType=&oldPrimaryDisplayPropertyType=&newHome=&auction=false'
+PropertyType = enum.Enum(
+    'DETACHED',
+    'SEMI_DETACHED',
+    'TERRACED',
+    'FLAT',
+    'LAND',
+    'OTHER'
+)
+          
 
-params = {
-    "Sec-Ch-Ua-Platform": "Windows",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
-}
-response = requests.get(url=base_url, params=params)
+class Filter:
+    def __init__(self, page, tenure='any', radius=0):
+        self.radius = radius
+        self.tenure = tenure
+        self.page = page
+        
+    
+    def generate_url(self):
+        url = f'https://rightmove.co.uk/house-prices/oxford.html?'
+        if self.radius != 0:
+            return url + f'radius={self.radius}&'
+        if self.tenure != 'any':
+            return url + f'tenure={self.tenure}&'
+        
+        return url
+        
+    
+class Property:
+    def __init__(self, price, bedrooms, bathrooms, address, postcode, distance):
+        self.price = price
+        self.bedrooms = bedrooms
+        self.bathrooms = bathrooms
+        self.address = address
+        self.postcode = postcode
+        self.distance = distance
 
-if response.status_code == 200:
-    # Scrape more info links for each property on the site
-    print("success")
+def get_property_pages(filter: Filter):
+    url = filter.generate_url()
+    for page in range(1, filter.page):
+        response = requests.get(url + f'page={page}')
+        if response.status_code == 200:
+            with open(f'./html/page_{page}.html', 'w', encoding='utf-8') as file:
+                file.write(response.text)
+        else:
+            print(f"Failed to retrieve page {page}")
+
+def calculate_distance_from(long, lat):
     pass
-else:
-    print(response.status_code)
+
+filter = Filter(50)
+
+get_property_pages(filter)
