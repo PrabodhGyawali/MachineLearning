@@ -2,3 +2,6 @@ __pychache__/
 Raw-Data-*
 .env
 venv/
+.venv/
+data
+*.pth
